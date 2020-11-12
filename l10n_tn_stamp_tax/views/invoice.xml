@@ -1,0 +1,14 @@
+<data>
+	<record id="nbs_account_invoice_form_inherit" model="ir.ui.view">
+		<field name="name">nbs.account.invoice.form.inherit</field>
+		<field name="model">account.move</field>
+		<field name="inherit_id" ref="account.view_move_form"/>
+		<field name="priority" eval="1"/>
+		<field name="arch" type="xml">
+			<xpath expr="//page[@name='other_info']//field[@name='fiscal_position_id']" position="after">
+				<field name="stamp_tax" domain="[('is_stamp', '=', True)]" attrs="{'readonly': [('state', '!=', 'draft')]}"/>
+<!--				<field name="fodec" domain="[('fodec', '=', True)]" attrs="{'readonly': [('state', '!=', 'draft')]}"/>-->
+			</xpath>
+		</field>
+	</record>
+</data>

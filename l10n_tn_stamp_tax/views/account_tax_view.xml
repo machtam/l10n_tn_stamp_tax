@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <!-- Inherit account tax form view to add withholding field -->
+    <record id="view_tax_form_inherit_l10n_tn_stamp_tax" model="ir.ui.view">
+        <field name="name">inherit.account.tax.form.view.to.add.stamp.field</field>
+        <field name="model">account.tax</field>
+        <field name="inherit_id" ref="account.view_tax_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='include_base_amount']" position="after">
+                <field name="is_stamp"/>
+<!--                <field name="fodec"/>-->
+            </xpath>
+
+        </field>
+    </record>
+</odoo>
