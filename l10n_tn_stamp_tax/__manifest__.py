@@ -7,6 +7,7 @@
     'author': 'Netformica Web Solutions',
     'website': 'https://www.netformica.com',
     'category': 'Localisation',
+    "license": "LGPL-3",
     'depends': ['base', 'account'],
     'application': False,
     'data': [
